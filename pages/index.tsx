@@ -74,7 +74,7 @@ const Home: NextPage = () => {
         <div className="flex items-center gap-5 mb-10">
           <motion.a
             variants={FADE_DOWN_ANIMATION_VARIANTS}
-            href="https://twitter.com/s_badaoui"
+            href="https://twitter.com/s0umy4_xD"
             target="_blank"
             rel="noreferrer"
             className="flex items-center justify-center px-10 py-3 space-x-2 overflow-hidden leading-5 transition-colors bg-blue-100 rounded-xl max-w-fit hover:bg-blue-200"
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
           </motion.a>
           <motion.a
             className="flex items-center justify-center px-10 py-3 space-x-2 leading-5 text-black transition-colors bg-white border border-gray-300 rounded-xl max-w-fit hover:border-gray-800"
-            href="https://github.com/badaoui220/screenia"
+            href="https://github.com/soumyaExe"
             target="_blank"
             rel="noopener noreferrer"
             variants={FADE_DOWN_ANIMATION_VARIANTS}
@@ -126,7 +126,7 @@ const Home: NextPage = () => {
                   type="url"
                   id="url"
                   pattern="https://.*"
-                  placeholder="https://themeptation.net"
+                  placeholder="https://SoumyadeepDey.vercel.app"
                   required
                 />
               </div>
