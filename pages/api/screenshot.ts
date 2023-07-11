@@ -30,10 +30,14 @@ async function getBrowserInstance() {
   });
 }
 
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
-) {
+): Promise<void> {
   const { url, type = "png", download = false, fullscreen = false } = req.query;
 
   const outPut = { type, fullPage: fullscreen };
@@ -45,8 +49,9 @@ export default async function handler(
 
   try {
     browser = await getBrowserInstance();
-    let page = await browser.newPage();
-    await page.goto(url);
+    const page = await browser.newPage();
+    await page.goto(url as string);
+    await delay(3000); // Delay of 3 seconds before taking the screenshot
     const screenshot = await page.screenshot(outPut);
 
     if (download) {
@@ -57,7 +62,7 @@ export default async function handler(
       res.end(screenshot);
     }
   } catch (error) {
-    res.status(500).json({ error: (error as any).message });
+    res.status(500).json({ error: (error as Error).message });
   } finally {
     if (browser !== null) {
       await browser.close();
