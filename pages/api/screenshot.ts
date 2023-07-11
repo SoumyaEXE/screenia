@@ -51,7 +51,7 @@ export default async function handler(
     browser = await getBrowserInstance();
     const page = await browser.newPage();
     await page.goto(url as string);
-    await delay(3000); // Delay of 3 seconds before taking the screenshot
+    await delay(6000); // Delay of 3 seconds before taking the screenshot
     const screenshot = await page.screenshot(outPut);
 
     if (download) {
