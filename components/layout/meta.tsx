@@ -13,7 +13,7 @@ export default function Meta({
 }) {
   return (
     <Head>
-      <title>{title}</title>
+      <title>{Screenia - A Web Based Online Screenshot Taker Tool}</title>
       <meta name="description" content={description} />
       <link rel="icon" href="/favicon.ico" />
       <link
