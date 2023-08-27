@@ -11,8 +11,8 @@ async function getBrowserInstance() {
       args: chromium.args,
       headless: true,
       defaultViewport: {
-        width: 2000,
-        height: 2700,
+        width: 1920,
+        height: 1080,
       },
       ignoreHTTPSErrors: true,
     });
@@ -21,8 +21,8 @@ async function getBrowserInstance() {
   return chromium.puppeteer.launch({
     args: chromium.args,
     defaultViewport: {
-      width: 2000,
-      height: 2700,
+      width: 1920,
+      height: 1080,
     },
     executablePath,
     headless: chromium.headless,
