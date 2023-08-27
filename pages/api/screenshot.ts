@@ -22,7 +22,7 @@ async function getBrowserInstance() {
     args: chromium.args,
     defaultViewport: {
       width: 1920,
-      height: 1000,
+      height: 1080,
     },
     executablePath,
     headless: chromium.headless,
